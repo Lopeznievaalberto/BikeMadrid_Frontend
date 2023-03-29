@@ -52,7 +52,7 @@ export const Profile = () => {
 
 
 
-    // const filterName = allRentals.filter((name) => name.nameUser === userRDX.userPass.name)
+  
 
     return (
         <div className='profileDesign'>
@@ -71,21 +71,7 @@ export const Profile = () => {
                     )
                 }
             </div>
-            <div className='Historic'>Historic</div>
-            {sales.length > 0 &&
-                sales.map(
-                    sale => {
-                        return (
-                            <div key={sale._id}>
-                                <div>Id bike: {sale.bike_id}</div>
-                                <div>Fecha de compra: {sale.date}</div>
-                                <div>Precio: {sale.price} €</div>
-                            </div>
-                        )
-                    }
-                )
-
-            }
+            
         </div>
     )
 }
