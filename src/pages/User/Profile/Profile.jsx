@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import { userData } from '../userSlice';
 import { getBySales } from '../../../services/apiCalls';
+import { SaleCard } from '../../../common/SaleCard/SaleCard';
 
 
 
@@ -51,19 +52,19 @@ export const Profile = () => {
 
 
 
-    const filterName = allRentals.filter((name) => name.nameUser === userRDX.userPass.name)
+    // const filterName = allRentals.filter((name) => name.nameUser === userRDX.userPass.name)
 
     return (
         <div className='profileDesign'>
             <div>Nombre: {userRDX.userPass.name}</div>
             <div>Email: {userRDX.userPass.token.data.userFound[0].email} {userRDX.userPass.email}</div>
             <div className='rosterDesign'>
-                {allRentals.length > 0 &&
-                    filterName.map(
-                        rental => {
+                {sales.length > 0 &&
+                    sales.map(
+                        sale => {
                             return (
-                                <div key={rental._id}>
-                                    <CardRental rental={rental} />
+                                <div key={sale._id}>
+                                    <SaleCard sale={sale} />
                                 </div>
                             )
                         }
