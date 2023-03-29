@@ -44,7 +44,7 @@ export const BikeDetail = () => {
                 <div className='bikeDetailCard'>
 
                     <img className='detailPoster' href={`${detailRdx.choosen.img}`} />
-                    {/* {console.log(detailRdx)} */}
+                    {console.log(detailRdx)}
                     <div>Marca: {detailRdx.choosen.brand}</div>
                     <div>Modelo: {detailRdx.choosen.model}</div>
                     <div>Nivel de estado de uso: {detailRdx.choosen.state}</div>
