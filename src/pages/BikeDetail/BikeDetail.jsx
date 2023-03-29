@@ -43,8 +43,8 @@ export const BikeDetail = () => {
             {detailRdx.choosen._id !== '' && (
                 <div className='bikeDetailCard'>
 
-                    <img className='detailPoster' src={`${detailRdx.choosen.img}`} />
-                    {console.log(detailRdx)}
+                    <img className='detailPoster' href={`${detailRdx.choosen.img}`} />
+                    {/* {console.log(detailRdx)} */}
                     <div>Marca: {detailRdx.choosen.brand}</div>
                     <div>Modelo: {detailRdx.choosen.model}</div>
                     <div>Nivel de estado de uso: {detailRdx.choosen.state}</div>

@@ -3,7 +3,7 @@ import axios from 'axios';
 const root = 'http://localhost:5700/';
 
 export const getBikes = async () => {
-    return await axios.get(`${root}bikes/`);
+    return await axios.get(`${root}bikes/getAllBikes`);
 };
 
 export const postLogin = async (credenciales) => {
