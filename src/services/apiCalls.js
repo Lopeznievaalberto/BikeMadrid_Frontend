@@ -27,12 +27,13 @@ export const allUsersAdmin = async (token) => {
 
 };
 
-export const getBySales = async (token, id) => {
+export const getBySales = async (token) => { //export const getBySales = async (token, _id) => { 
 
     let config = {
-        headers: { Authorization: `Bearer ${token}` },
+        headers: { 
+            'Authorization': 'Bearer ' + token} //Authorization: `Bearer ${token}` },
     };
-    return await axios.get(`${root}sales/BySales/${_id}`, config);
+    return await axios.get(`${root}sales/getAllSales`, config);  //return await axios.get(`${root}sales/BySales/${_id}`, config);
 };
 
 export const postRent= async (body, token) => {
