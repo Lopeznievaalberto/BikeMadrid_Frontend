@@ -1,0 +1,27 @@
+.cardBikeDesign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 8em;
+    width: 20em;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(180, 188, 223, 1) 100%);
+    color: rgb(28, 28, 28);
+    transition: 0.3s;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+.cardBikeDesign:hover {
+    transition: 0.3s;
+    height: 9em;
+    width: 21em;
+    background: rgb(218, 154, 182);
+    background: radial-gradient(circle, rgba(218, 154, 182, 1) 0%, rgba(180, 1188, 223, 1) 100%);
+}
+
+.posterDesign {
+    height: 5em;
+    width: 15em;
+}

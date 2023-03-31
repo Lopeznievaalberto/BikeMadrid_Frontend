@@ -20,23 +20,22 @@ export const getSearch = async (criterioBusqueda) => {
 
 export const allUsersAdmin = async (token) => {
 
-    let config = {
-        headers: { Authorization: `Bearer ${token}` },
-    };
+    // let config = {
+    //     headers: { Authorization: `Bearer ${token}` },
+    // };
     return await axios.get(`${root}users/getAll`, config);
-
 };
 
 export const getBySales = async (token) => { //export const getBySales = async (token, _id) => { 
 
-    let config = {
-        headers: { 
-            'Authorization': 'Bearer ' + token} //Authorization: `Bearer ${token}` },
-    };
+    // let config = {
+    //     headers: { 
+    //         'Authorization': 'Bearer ' + token} //Authorization: `Bearer ${token}` },
+    // };
     return await axios.get(`${root}sales/getAllSales`, config);  //return await axios.get(`${root}sales/BySales/${_id}`, config);
 };
 
-export const postRent= async (body, token) => {
+export const postRent= async (body) => { //export const postRent= async (body, token) => {
 
     // let config = {
     //     headers: { Authorization: `Bearer ${token}` }
@@ -44,11 +43,13 @@ export const postRent= async (body, token) => {
     return await axios.post(`${root}rentals/newRental`, body, config);
 };
 
+
 export const postSale= async (body, token) => {
 
-    let config = {
-        headers: { Authorization: `Bearer ${token}` }
-    };
+    // let config = {
+    //     headers: { 
+    //         'Authorization': 'Bearer ' + token} //Authorization: `Bearer ${token}` },
+    // };
     return await axios.post(`${root}sales/newSale`, body, config);
 };
 

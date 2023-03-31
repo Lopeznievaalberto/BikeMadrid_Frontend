@@ -20,8 +20,8 @@ export const BikeDetail = () => {
             bike_id: detailRdx.choosen._id,
             bikeModel: detailRdx.choosen.model,
             user_id: detailUsr.userPass._id,
-            userName: detailUsr.userPass.name,
-            rentalDate: dayjs().format('DD/MM/YYYY'),
+            name: detailUsr.userPass.name,
+            saleDate: dayjs().format('DD/MM/YYYY'),
             price: detailRdx.choosen.price
         }
 

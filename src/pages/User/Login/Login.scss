@@ -13,7 +13,7 @@
     width: 8em;
     text-align: center;
     background: rgb(238, 174, 202);
-    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(180, 188, 223, 1) 100%);
     cursor: pointer;
     border-radius: 1em;
     transition: 0.3s;
@@ -24,7 +24,7 @@
     width: 9em;
     transition: 0.3s;
     background: rgb(218, 154, 182);
-    background: radial-gradient(circle, rgba(218, 154, 182, 1) 0%, rgba(128, 167, 213, 1) 100%);
+    background: radial-gradient(circle, rgba(218, 154, 182, 1) 0%, rgba(180, 188, 223, 1) 100%);
 }
 
 .errorText {

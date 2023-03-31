@@ -5,7 +5,7 @@
     align-items: center;
     height: 85vh;
     width: 100vw;
-    background-color: rgb(28, 28, 28);
+    background-color: rgba(180,188,223);
 }
 
 .rosterDesign {
@@ -13,4 +13,31 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.design{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.newBike {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5em;
+    width: 8em;
+    border-radius: 1em;
+    background-color: rgb(253, 27, 27);
+    cursor: pointer;
+    transition: 0.2s;
+    color: white;
+}
+
+.newBike:hover {
+    transition: 0.2s;
+    background-color: rgb(243, 91, 91);
 }

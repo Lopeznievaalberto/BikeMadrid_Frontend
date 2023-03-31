@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Header.scss';
-
+import inicio from '../../assets/home.jpg';
 import { useSelector, useDispatch } from "react-redux";
 import { userData, logout } from "../../pages/User/userSlice";
-import { bikeData, find, clear } from '../../pages/bikeSlice';
+import { bikeData, select, find, clear } from '../../pages/bikeSlice';
 
 //import { InputText } from '../InputText/InputText';
 import { getSearch } from '../../services/apiCalls';
@@ -48,7 +48,7 @@ export const Header = () => {
         setSearch(e.target.value);
     }
 
-    const ResetHome = () => {
+    const resetHome = () => {
         dispatch(clear({ choosen: {}, bikes: [] }));
         navigate("/")
     }
@@ -58,7 +58,7 @@ export const Header = () => {
     }
 
     return (
-        <div className='headerDesign'>
+        <div className='headerDesign col-xs-12 col-sm-4 col-md-4 col-lg-4'>
 
             {/* <div onClick={() => ResetHome()} className='logoDesignHeader'><img id="logoHome" className='cameraAvatar' src={Logo} alt="Camara" /></div>
             <div className='searchDesign'>
@@ -71,19 +71,20 @@ export const Header = () => {
                     errorHandler={searchErrorHandler}
                 />
             </div> */}
-            <div className='headerLinksDesign'>
+             <div onClick={() => resetHome()} className='logoDesignHeader '><img className='inicio' src={inicio} alt="inicio" /></div>
+            <div className='headerLinksDesign '>
                 {datosReduxUsuario.userPass.rol === "admin" &&
-                    <div onClick={() => navigate("/admin")} className='linkDesign'>admin</div>
+                    <div onClick={() => navigate("/admin")} className='linkDesign '>admin</div>
                 }
                 {datosReduxUsuario.userPass.token !== "" ?
                     (<>
-                        <div onClick={() => navigate("/profile")} className='linkDesign' >{datosReduxUsuario.userPass?.name}</div>
-                        <div className='linkDesign' onClick={() => logOff()}>logout</div>
+                        <div onClick={() => navigate("/profile")} className='linkDesign ' >{datosReduxUsuario.userPass?.name}</div>
+                        <div className='linkDesign ' onClick={() => logOff()}>logout</div>
                     </>)
                     : (
                         <>
-                            <div className='linkDesign' onClick={() => setTimeout(() => { navigate("/login") }, 200)}>login</div>
-                            <div className='linkDesign' onClick={() => setTimeout(() => { navigate("/register") }, 200)}>register</div>
+                            <div className='linkDesign col-xs-12 col-sm-4 col-md-4 col-lg-4' onClick={() => setTimeout(() => { navigate("/login") }, 200)}>login</div>
+                            <div className='linkDesign col-xs-12 col-sm-4 col-md-4 col-lg-4' onClick={() => setTimeout(() => { navigate("/register") }, 200)}>register</div>
                         </>
                     )
                 }

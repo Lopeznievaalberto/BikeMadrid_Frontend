@@ -67,6 +67,8 @@ export const Home = () => {
                     )
                 )
             }
+            <div onClick={createNewBike} className='newBike'>Añadir bicicleta</div>
         </div>
+        
     );
  };
