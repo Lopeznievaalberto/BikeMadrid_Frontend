@@ -33,6 +33,7 @@ export const Home = () => {
             navigate("/BikeDetail");
         }, 250);
     }
+   
 
     return (
         <div className='homeDesign'>
@@ -67,7 +68,7 @@ export const Home = () => {
                     )
                 )
             }
-            <div onClick={createNewBike} className='newBike'>Añadir bicicleta</div>
+            
         </div>
         
     );

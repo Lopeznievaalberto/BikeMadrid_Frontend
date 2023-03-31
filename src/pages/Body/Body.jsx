@@ -7,6 +7,7 @@ import { Login } from '../User/Login/Login';
 import { Profile } from '../User/Profile/Profile';
 import { Register } from '../User/Register/Register';
 import { BikeDetail } from '../BikeDetail/BikeDetail';
+import { AddBike } from '../AddBike/AddBike';
 
 export const Body = () => {
 
@@ -19,6 +20,7 @@ export const Body = () => {
             {/* Admin secret */}
             <Route path="/admin" element={<Admin />}/>
             <Route path="/BikeDetail" element={<BikeDetail />}/>
+            <Route path="/AddBike" element={<AddBike />}/>
         </Routes>
     )
 };

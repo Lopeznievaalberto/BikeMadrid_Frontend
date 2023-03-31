@@ -18,6 +18,14 @@ export const getSearch = async (criterioBusqueda) => {
     return await axios.get(`${root}users/getAllUsers?user=${criterioBusqueda}`);
 }
 
+export const postAdd = async(body)=>{
+    return await axios.post(`${root}bikes/newBike`, body)
+}
+
+
+
+
+
 export const allUsersAdmin = async (token) => {
 
     // let config = {

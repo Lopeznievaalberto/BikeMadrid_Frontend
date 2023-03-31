@@ -45,7 +45,11 @@ export const Profile = () => {
         };
 
     }, [sales]);
-
+    
+    const createNewBike = () => {
+        dispatch(select({ choosen: {}, bikes: [] }));
+        navigate("/addBike")
+    }
 
     // const filterSales = sales.filter((name) => name.user_id.name === userRDX.userPass.name)
 
@@ -67,7 +71,7 @@ export const Profile = () => {
                     )
                 }
             </div>
-            
+            <div onClick={createNewBike} className='newBike'>Añadir bicicleta</div>
         </div>
     )
 }
