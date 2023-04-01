@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Profile.scss';
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { userData } from '../userSlice';
 import { getBySales } from '../../../services/apiCalls';
 import { SaleCard } from '../../../common/SaleCard/SaleCard';
@@ -45,11 +45,18 @@ export const Profile = () => {
         };
 
     }, [sales]);
+
+    // const Choosen = (bike) => {
+    //     dispatch(select({ choosen: bikes }))
+    //     setTimeout(() => {
+    //         navigate("/addBike");
+    //     }, 250);
+    // }
     
-    const createNewBike = () => {
-        dispatch(select({ choosen: {}, bikes: [] }));
-        navigate("/addBike")
-    }
+    // const createNewBike = () => {
+    //     dispatch(select({ choosen: {}, bikes: [] }));
+    //     navigate("/addBike")
+    // }
 
     // const filterSales = sales.filter((name) => name.user_id.name === userRDX.userPass.name)
 
@@ -71,7 +78,7 @@ export const Profile = () => {
                     )
                 }
             </div>
-            <div onClick={createNewBike} className='newBike'>Añadir bicicleta</div>
+            {/* <div onClick={createNewBike} className='newBike'>Añadir bicicleta</div> */}
         </div>
     )
 }

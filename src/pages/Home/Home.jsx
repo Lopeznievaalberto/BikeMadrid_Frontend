@@ -33,6 +33,11 @@ export const Home = () => {
             navigate("/BikeDetail");
         }, 250);
     }
+
+    const createNewBike = () => {
+        dispatch(select({ choosen: {}, bikes: [] }));
+        navigate("/addBike")
+    }
    
 
     return (
@@ -68,7 +73,7 @@ export const Home = () => {
                     )
                 )
             }
-            
+             <div onClick={createNewBike} className='newBike'>Añadir bicicleta</div>
         </div>
         
     );
