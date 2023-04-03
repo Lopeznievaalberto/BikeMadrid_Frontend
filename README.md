@@ -4,12 +4,18 @@ Este frontend es el ecommerce respaldado por el proyecto anterior alojado en: ht
 Se trata de la vista del ecommerce sobre la venta/alquiler de bicicletas ya mencionado, creado en VITE+REACT.
 
 ###Routes
+
 Las rutas navegables del frontend se describen aquí:
 ( http://localhost:5173/login) -en esta vista se realiza el login de un usuario ya existente, introduciendo los campos requeridos
+
 ( http://localhost:5173/register) -en esta vista se realiza el registro de un nuevo usuario que será guardado en el backend y solicitado en la vista login
+
 ( http://localhost:5173/profile) -en esta vista se pueden comprobar los datos relacionados con el perfil de un usuario logeado
+
 ( http://localhost:5173/admin) -en esta vista se pueden obtener una lista de todos los usuarios
+
 ( http://localhost:5173/BikeDetail) -en esta vista se puede ver la ficha técnica de la bicicleta y acceder a la funcionalidad de comprarla
+
 ( http://localhost:5173/AddBike) -en esta vista se puede rellenar el formulario que añadirá el registro de una nueva bicicleta al backend citado. 
 
 
